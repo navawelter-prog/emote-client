@@ -1,0 +1,25 @@
+{
+	"schemaVersion": 1,
+	"id": "emoteclient",
+	"version": "${version}",
+	"name": "Emote Client",
+	"description": "Emotes, die jeder mit dem Client sehen kann. Die Emotes laufen ueber einen kleinen Relay-Server.",
+	"authors": ["Nava"],
+	"license": "All-Rights-Reserved",
+	"environment": "client",
+	"entrypoints": {
+		"client": ["dev.nava.emoteclient.EmoteClientMod"]
+	},
+	"mixins": [
+		{
+			"config": "emoteclient.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.1",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
